@@ -7,7 +7,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const login = user => dispatch => {
     return APIUtil.login(user)
     .then(user => dispatch(receiveCurrentUser(user)),
-        errors => dispatch(receiveErrors(errors.responseJSON))
+        errors => dispatch(receiveErrors(errors.responseJSON)));
 }
 
 export const logout = () => dispatch => {
